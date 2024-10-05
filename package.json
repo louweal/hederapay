@@ -12,5 +12,8 @@
     "@hashgraph/sdk": "^2.49.2",
     "dotenv": "^16.4.5",
     "hashconnect": "^3.0.13"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
   }
 }

@@ -1,14 +1,14 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const { Client, TokenId, AccountId, PrivateKey, TokenAssociateTransaction } = require('@hashgraph/sdk');
+const { Client, TokenId, AccountId, PrivateKey, TokenAssociateTransaction } = require("@hashgraph/sdk");
 
 associate();
 
 async function associate() {
-    let accountId = AccountId.fromString(process.env.MY_ACCOUNT_ID);
-    let accountKey = PrivateKey.fromString(process.env.MY_PRIVATE_KEY);
+    let accountId = AccountId.fromString(process.env.MY_ACCOUNT_ID2);
+    let accountKey = PrivateKey.fromString(process.env.MY_PRIVATE_KEY2);
 
-    let tokenId = TokenId.fromString('0.0.429274'); // testnet usdc
+    let tokenId = TokenId.fromString("0.0.429274"); // testnet usdc
 
     const client = Client.forTestnet();
     //Set the operator account and private key
@@ -32,5 +32,5 @@ async function associate() {
     //Get the transaction consensus status
     const transactionStatus = receipt.status;
 
-    console.log('The transaction consensus status ' + transactionStatus.toString());
+    console.log("The transaction consensus status " + transactionStatus.toString());
 }
